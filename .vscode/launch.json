@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "name": "Run",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}/main.out",
+      "args": [
+        "ARGUMENTS"
+      ],
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "gdbの再フォーマットを有効にする",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "逆アセンブリフレーバーをIntelに設定",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        },
+      ],
+      "preLaunchTask": "build",
+    }
+  ],
+  "version": "2.0.0"
+}

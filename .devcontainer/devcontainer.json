@@ -1,0 +1,30 @@
+{
+  "name": "universal",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "containerEnv": {
+    "TZ": "Asia/Tokyo"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "donjayamanne.githistory",
+        "yzhang.markdown-all-in-one",
+        "yzane.markdown-pdf",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.makefile-tools",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "mathematic.vscode-pdf"
+      ]
+    }
+  },
+  "postStartCommand": "sudo apt-get update && sudo apt-get install -y fonts-noto-cjk libxtst6",
+  // dockerのimageにuniversal以外を使用する場合は docker in docker を有効にする
+  // "features": {
+  // 	"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  // }
+  // "forwardPorts": [3000, 8080, 8090],
+  // "appPort": ["3000:3000", "8080:8080", "8090:8090"]
+}
